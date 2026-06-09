@@ -1,0 +1,168 @@
+/* ── HEADER ─────────────────────────────────────────────── */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: background 0.5s cubic-bezier(0.25,0.46,0.45,0.94),
+              padding 0.3s, box-shadow 0.3s, backdrop-filter 0.5s;
+}
+
+.header--scrolled {
+  background: rgba(242,239,232,0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 12px 0;
+  box-shadow: 0 1px 0 rgba(27,42,42,0.08);
+}
+
+/* Hero variant — transparent over dark image */
+.header--hero .header__logo-name { color: #F2EFE8; }
+.header--hero .header__logo-tag  { color: rgba(242,239,232,0.55); }
+.header--hero .header__nav a     { color: rgba(242,239,232,0.8); opacity: 1; }
+.header--hero .header__nav a:hover { color: #F2EFE8; }
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Logo */
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.header__logo-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--brand-deep);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  transition: color 0.3s;
+}
+.header__logo-tag {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+/* Nav */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header__nav a {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  opacity: 0.65;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.2s, opacity 0.2s;
+}
+.header__nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--secondary);
+  transition: width 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+.header__nav a:hover,
+.header__nav a.active { color: var(--brand-deep); opacity: 1; }
+.header__nav a:hover::after,
+.header__nav a.active::after { width: 100%; }
+
+.header__cta { display: flex; align-items: center; }
+
+/* Hero CTA button — white outline */
+.btn-hero-cta {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.55);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 11px;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+.btn-hero-cta:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Burger */
+.header__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 1100;
+}
+.header__burger span {
+  display: block;
+  width: 24px; height: 1.5px;
+  background: var(--brand-deep);
+  transition: transform 0.3s, opacity 0.3s, width 0.3s;
+}
+.header--hero .header__burger span { background: #F2EFE8; }
+.header__burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.header__burger.open span:nth-child(2) { opacity: 0; width: 0; }
+.header__burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile Drawer */
+.drawer {
+  position: fixed;
+  inset: 0;
+  background: rgba(27,42,42,0.97);
+  backdrop-filter: blur(24px);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.drawer--open { opacity: 1; pointer-events: all; }
+
+.drawer__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.drawer__nav a {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem,5vw,3rem);
+  font-weight: 700;
+  color: #F2EFE8;
+  letter-spacing: -0.02em;
+  transition: color 0.2s;
+}
+.drawer__nav a:hover { color: var(--secondary); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .header__nav  { display: none; }
+  .header__cta  { display: none; }
+  .header__burger { display: flex; }
+}
