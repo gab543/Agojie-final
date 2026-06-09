@@ -12,7 +12,7 @@ export default function Footer() {
               Conseil en projets de santé à impact. De la stratégie au terrain,
               nous accompagnons les décideurs qui osent transformer.
             </p>
-            <span className="footer__tagline">Conseil en santé · Paris · International</span>
+            <span className="footer__tagline">Cabinet de Parcours en Santé · DE Infirmière · Paris · International</span>
           </div>
 
           <div>

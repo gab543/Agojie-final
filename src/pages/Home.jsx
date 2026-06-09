@@ -65,15 +65,14 @@ export default function Home() {
           <div className="hero__content container">
             <HeroLine className="hero__eyebrow" delay={0}>
               <span className="text-label" style={{ color: 'rgba(242,239,232,0.7)' }}>
-                Cabinet de Conseil en Santé
+                Cabinet de Parcours en Santé &bull; D.E. Infirmière
               </span>
             </HeroLine>
             <HeroLine className="hero__headline font-display" delay={150}>
               L'Expertise Santé<br /><em>Repensée.</em>
             </HeroLine>
             <HeroLine className="hero__sub" delay={300}>
-              Accompagner les décideurs pour bâtir des écosystèmes<br />
-              durables, éthiques et ancrés dans les réalités de chaque territoire.
+              Replacer l'humain au cœur de la stratégie.
             </HeroLine>
             <HeroLine className="hero__actions" delay={450}>
               <Link to="/reserver" className="btn btn-primary">Lancer un projet →</Link>
@@ -118,7 +117,7 @@ export default function Home() {
                 <Reveal delay={320}>
                   <div className="heritage__stats">
                     <StatItem target={10} suffix="+" label="Pays d'intervention" />
-                    <StatItem target={50} suffix="+" label="Audits stratégiques" />
+                    <StatItem target={50} suffix="+" label="Missions réalisées" />
                     <StatItem target={12} suffix="" label="Années d'engagement" />
                   </div>
                 </Reveal>

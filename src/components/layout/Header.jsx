@@ -32,7 +32,7 @@ export default function Header() {
           <div className="header__inner">
             <Link to="/" className="header__logo" aria-label="Agojie — Accueil">
               <span className="header__logo-name">Agojie</span>
-              <span className="header__logo-tag">Concevoir pour l'impact</span>
+              <span className="header__logo-tag">Replacer l'humain au cœur</span>
             </Link>
 
             <nav className="header__nav" aria-label="Navigation principale">
