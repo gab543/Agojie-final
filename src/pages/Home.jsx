@@ -65,7 +65,7 @@ export default function Home() {
           <div className="hero__content container">
             <HeroLine className="hero__eyebrow" delay={0}>
               <span className="text-label" style={{ color: 'rgba(242,239,232,0.7)' }}>
-                Cabinet de Parcours en Santé &bull; D.E. Infirmière
+                Votre partenaire santé - Optimisons vos parcours de soins.
               </span>
             </HeroLine>
             <HeroLine className="hero__headline font-display" delay={150}>

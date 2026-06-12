@@ -35,6 +35,7 @@
   flex-direction: column;
   gap: 2px;
   flex-shrink: 0;
+  max-width: 260px;
 }
 .header__logo-name {
   font-family: 'Playfair Display', serif;
@@ -48,10 +49,10 @@
 .header__logo-tag {
   font-size: 9px;
   font-weight: 500;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
-  line-height: 1;
+  line-height: 1.2;
   transition: color 0.3s;
 }
 

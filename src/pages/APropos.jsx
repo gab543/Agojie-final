@@ -43,7 +43,7 @@ export default function APropos() {
                   <div className="founder__photo-wrap">
                     <img
                       src={photoFonda}
-                      alt="Fondatrice Agojie — D.E. Infirmière"
+                      alt="Fondatrice Agojie"
                       className="founder__photo"
                       onError={(e) => {
                         // Fallback si photo pas encore disponible
@@ -63,8 +63,8 @@ export default function APropos() {
                   </div>
 
                   <div className="founder__card-footer">
-                    <p className="founder__name">Fondatrice &amp; Directrice</p>
-                    <p className="founder__role">D.E. Infirmière · Stratégie &amp; Parcours de Santé</p>
+                    <p className="founder__name">Fondatrice</p>
+                    <p className="founder__role">Stratégie &amp; Parcours de Santé</p>
                   </div>
                 </div>
               </Reveal>
